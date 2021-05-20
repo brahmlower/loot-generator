@@ -1,0 +1,19 @@
+{
+  "name": "loot-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "run": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "script:makeBook": "node ./scripts/makeBook.js",
+    "script:seed": "node ./scripts/seed.js",
+    "neo4j:setup": "mkdir -p ./data",
+    "neo4j:server": "docker run --publish=7474:7474 --publish=7687:7687 --volume=$(pwd)/data:/data --env=NEO4J_AUTH=none neo4j"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "neo4j-driver": "^4.2.3"
+  }
+}
